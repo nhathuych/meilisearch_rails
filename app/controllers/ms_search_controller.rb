@@ -1,6 +1,7 @@
 class MsSearchController < ApplicationController
   def search
-    @articles = Article.search(params[:query], sort: [ "id:asc" ])
+    @articles = Article.includes(:addresses)
+    @articles = @articles.search(params[:query], sort: [ "id:asc" ]) if params[:query].present?
 
     respond_to do |format|
       format.turbo_stream do
