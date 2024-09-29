@@ -36,6 +36,8 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "meilisearch-rails", "0.14.1"
+
 gem "faker", "~> 3.4", ">= 3.4.2"
 
 group :development, :test do

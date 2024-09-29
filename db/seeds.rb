@@ -11,3 +11,5 @@
 100.times do
   Article.create(title: Faker::Food.dish, body: Faker::Food.description)
 end
+
+Article.reindex!
