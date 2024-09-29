@@ -9,7 +9,13 @@
 #   end
 
 100.times do
-  Article.create(title: Faker::Food.dish, body: Faker::Food.description)
+  article = Article.new(title: Faker::Food.dish, body: Faker::Food.description)
+
+  article.addresses.build(street_address: Faker::Address.street_address)
+  article.addresses.build(street_address: Faker::Address.street_address)
+
+  article.save
 end
 
 Article.reindex!
+Address.reindex!
