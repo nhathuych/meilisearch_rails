@@ -5,7 +5,7 @@
 bin/dev
 ```
 
-## Visit this after run "rails db:seed"
+## Visit this after running "rails db:seed"
 We can see all the data and search it on this page.
 ```
 http://127.0.0.1:7700/

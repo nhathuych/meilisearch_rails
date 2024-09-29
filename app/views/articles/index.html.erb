@@ -10,7 +10,11 @@
     <%= link_to "New article", new_article_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="articles" class="min-w-full mt-3">
+  <div class="flex justify-center">
+    <%= render partial: "search/form" %>
+  </div>
+
+  <div id="js-articles" class="min-w-full mt-3">
     <%= render @articles %>
   </div>
 </div>

@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   root "articles#index"
 
   resources :articles
+  resources :ms_search do
+    collection do
+      post :search
+    end
+  end
 end
